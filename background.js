@@ -1,8 +1,6 @@
-chrome.browserAction.onClicked.addListener(copyFromTab);
 
 
-function copyFromTab(){
-    console.log("Copying Background");
-    chrome.tabs.sendMessage(tab.id, msg);
-}
-
+chrome.runtime.onInstalled.addListener(() => {
+  chrome.storage.sync.set({ color });
+  console.log('Default background color set to %cgreen', `color: ${color}`);
+});
