@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Copy Load Info",
-    "description": "Easily copy the lane info",
+    "description": "Automatically Copy The Load Number and Stops 5 Seconds After The Active Load Webpage Has Loaded",
     "version": "1.0",
     "icons": {
         "16": "/images/icon_16.png",
@@ -19,12 +19,13 @@
         }
     ],
     "permissions": [
-        "tabs", "storage", "activeTab", "scripting"
+        "tabs",
+        "storage",
+        "activeTab",
+        "scripting"
     ],
     "background": {
         "service_worker": "background.js"
     },
-    "action": {
-        "default_popup": "popup.html"
-      }
+    "action": {}
 }
