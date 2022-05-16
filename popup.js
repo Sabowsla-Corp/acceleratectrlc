@@ -6,3 +6,9 @@ function popup() {
   });
 }
 
+
+chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+  console.log("Received Message To Pop Up");
+ 
+  sendResponse();
+});
