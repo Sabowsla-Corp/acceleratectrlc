@@ -1,5 +1,4 @@
 function popup() {
-
   chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
     var activeTab = tabs[0];
     console.log("Sending Message To Content");
@@ -7,7 +6,3 @@ function popup() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-
-  document.getElementById("CopyLoad").addEventListener("click", popup);
-});

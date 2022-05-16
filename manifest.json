@@ -24,8 +24,14 @@
         "activeTab",
         "scripting"
     ],
+    "host_permissions": [
+        "https://mail.google.com/*"
+    ],
     "background": {
         "service_worker": "background.js"
     },
-    "action": {}
+    "action": {
+        "default_title": "Click Me",
+        "default_popup": "popup.html"
+    }
 }
