@@ -65,6 +65,14 @@ function injectCopyButton() {
     document.getElementById("load-overview-header__status").appendChild(div);
     document.getElementById("load-overview-header__status").appendChild(btn);
     btn.addEventListener('click', event => {
+      chrome.runtime.sendMessage({
+        type: "notification", options: {
+          type: "basic",
+          title: "Test",
+          message: extractLoadData()
+        }
+      });
+
       copyTextToClipboard(extractLoadData());
     });
   }
